@@ -1,0 +1,28 @@
+@use "sass:map";
+$bp-mobile: 375px;
+$bp-tablet: 768px;
+$bp-laptop: 1440px;
+$bp-desktop: 1920px;
+
+$colors: (
+  text1: #292d33,
+  text2: #51555a,
+  text3: #797c80,
+  text4: #bfbfbf,
+  osnovnoy: #1dc3b0,
+  temnyy-osnovnoy: #059e8c,
+  osnovnoy-2: #e31351,
+  fon2: #f5fbfc,
+  fon3: #eef3f7,
+  grani: #cfdfe5,
+  belyy: #fff,
+  belyy2: #f7f7f7,
+  logo: #364b76,
+  ikonki-uslugi: #086358,
+  marker-poiska: #ffe768,
+  zatemnenie: #192224,
+);
+
+@function color($name) {
+  @return map.get($colors, $name);
+}
