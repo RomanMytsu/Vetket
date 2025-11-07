@@ -1,1 +1,135 @@
 @use "../scss/utils/_variables.scss" as *;
+
+.side-bar {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: 300px;
+    border-right: 1px solid #cfdfe5;
+    padding-top: 149px;
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      padding-left: 56px;
+    }
+    &__menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__menu-tem-link {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+      color: color(text2);
+      transition: color 0.4s ease;
+      &:hover {
+        color: color(osnovnoy);
+      }
+    }
+
+    &__menu-tem-link-sub {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      transition: color 0.4s ease;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid color(text2);
+        border-bottom: 2px solid color(text2);
+        transform: rotate(45deg);
+        margin-left: 5px;
+        margin-top: -5px;
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        color: color(osnovnoy);
+      }
+    }
+
+    &__sub-menu-list {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+
+      .side-bar__sub-menu-link {
+        line-height: 1.25;
+        color: color(text2);
+        transition: color 0.4s;
+
+        &:hover {
+          color: #00bfa5;
+        }
+      }
+    }
+    input:checked + label {
+      color: #00bfa5;
+    }
+
+    input:checked + label::after {
+      content: "";
+      width: 16px;
+      height: 1px;
+      background-color: #00bfa5;
+      border: none;
+      transform: none;
+    }
+
+    input:checked ~ .side-bar__sub-menu-list {
+      display: flex;
+    }
+
+    &__text-content {
+      background: color(fon2);
+      padding: 52px 41px;
+      margin-top: 137px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #cfdfe5;
+      @media (min-width: $bp-desktop) {
+        margin-top: 250px;
+      }
+    }
+    &__text-content-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 0.8;
+      margin-bottom: 7px;
+      margin-right: 9px;
+    }
+    &__text-content-subtitle {
+      font-size: 14px;
+      line-height: 1.14;
+      opacity: 0.7;
+      margin-right: 3px;
+      margin-bottom: 25px;
+    }
+    &__text-content-btn {
+      border-radius: 16px;
+      padding: 11px 24px;
+      width: 218px;
+      height: 48px;
+      background-color: color(osnovnoy-2);
+      border: none;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: color(belyy);
+      transition: background-color 0.4s ease;
+      &:hover {
+        background-color: #f72056;
+      }
+    }
+  }
+}

@@ -161,6 +161,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 200;
     cursor: pointer;
     @media (min-width: $bp-laptop) {
       display: none;
@@ -194,6 +195,9 @@
       }
     }
     &.active {
+      position: absolute;
+      top: 20px;
+      right: 20px;
       span {
         background-color: transparent;
 
