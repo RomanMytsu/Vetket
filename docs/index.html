@@ -3,12 +3,60 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20251104145145" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20251107120644" />
   <title>Главная</title>
 </head>
 
   <body>
-    <p>hello</p>
-    <script src="js/main.min.js?_v=20251104145145"></script>
+    <header class="header">
+  <div class="header__container container">
+    <div class="header__wrapper">
+      <a href="/" class="header__logo-link">
+        <picture><source srcset="img/header/logo-img.webp" type="image/webp"><img src="img/header/logo-img.webp" alt="Logo image" /></picture>
+        <div class="header__logo-box">
+          <svg class="header__logo-icon-cat" width="80" height="19">
+            <use href="img/sprite.svg#header--vet-cat-text"></use>
+          </svg>
+          <svg class="header__logo-icon-text" width="70" height="18">
+            <use href="img/sprite.svg#header--text-logo"></use>
+          </svg>
+        </div>
+      </a>
+
+      <div class="header__search">
+        <svg class="header__search-icon" width="30" height="30">
+          <use href="img/sprite.svg#header--search-icon"></use>
+        </svg>
+        <input type="text" id="header-search" placeholder="Поиск по сайту" />
+      </div>
+
+      <div class="header__address">
+        <div class="header__box">
+          <p class="header__address-street">Одесса, Чкалова д. 57/5</p>
+          <p class="header__address-area">Приморский район</p>
+        </div>
+        <div class="header__box">
+          <p class="header__address-street">Одесса, Заболотного д.21/1</p>
+          <p class="header__address-area">Суворовский район</p>
+        </div>
+      </div>
+      <div class="header__contact">
+        <a href="tel:+380971102303" class="header__tel-link"
+          >+38 (097) 110-23-03</a
+        >
+        <button class="header__order-call" type="button">
+          Заказать звонок
+        </button>
+      </div>
+      <div class="header__burger-menu">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+    <script src="js/main.min.js?_v=20251107120644"></script>
   </body>
 </html>

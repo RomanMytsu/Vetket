@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+body,
 p,
 h1,
 h2,
@@ -12,8 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 img {
   display: block;
@@ -46,7 +46,8 @@ svg {
 
 body {
   font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   background-color: color(belyy);
-  margin: 0;
-  overflow-x: hidden;
+  color: color(text1);
 }

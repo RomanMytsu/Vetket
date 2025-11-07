@@ -1,3 +1,6 @@
 @use "./utils/_variables.scss" as *;
 @use "./fonts.scss";
 @use "./base.scss";
+
+@use "./components/header.scss";
+@use "./components/side-bar.scss";
