@@ -1,9 +1,6 @@
 @use "../scss/utils/_variables.scss" as *;
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   background-color: color(fon2);
   padding: 16px 0;
   width: 100%;

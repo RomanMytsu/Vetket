@@ -4,7 +4,11 @@
   <body>
     @@include('components/header.html', { })
     @@include('components/burger-menu.html', { })
-    @@include('components/side-bar.html', { })
+    <div class="layout">
+      @@include('components/side-bar.html', { })
+      <main>@@include('components/hero.html', { })</main>
+    </div>
+
     <script src="js/main.min.js"></script>
   </body>
 </html>
