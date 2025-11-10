@@ -1,0 +1,139 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.popular-services {
+  padding-top: 50px;
+  @media (min-width: $bp-tablet) {
+    padding-top: 70px;
+  }
+  @media (min-width: $bp-laptop) {
+    padding-top: 120px;
+  }
+  @media (min-width: $bp-desktop) {
+    padding-top: 205px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 214px;
+    }
+  }
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 62px;
+    @media (min-width: $bp-tablet) {
+      align-items: center;
+      gap: 20px;
+    }
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 45px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 185px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.17;
+    text-align: center;
+    @media (min-width: $bp-tablet) {
+      font-size: 35px;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 40px;
+      margin-left: 40px;
+      text-align: left;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+    }
+  }
+  &__btns-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  &__link {
+    border: 2px solid color(osnovnoy);
+    border-radius: 16px;
+    padding-top: 11px;
+    width: 203px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(text2);
+    background-color: transparent;
+    transition: all 0.4s ease;
+    @media (min-width: $bp-tablet) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: color(osnovnoy);
+      color: color(belyy);
+    }
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    button {
+      display: none;
+      @media (min-width: $bp-tablet) {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        width: 32px;
+        height: 32px;
+
+        svg {
+          fill: color(text1);
+        }
+      }
+    }
+  }
+  &__slide-item {
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    border-radius: 8px;
+    padding: 28px 32px 82px;
+
+    @media (min-width: $bp-tablet) {
+      height: 240px;
+    }
+  }
+  &__slide-item-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    @media (min-width: $bp-tablet) {
+      font-size: 18px;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 20px;
+    }
+  }
+  &__slide-item-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: color(text2);
+    @media (min-width: $bp-laptop) {
+      font-size: 16px;
+    }
+  }
+}

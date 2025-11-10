@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('components/head.html', { "title":"Главная" })
+  @@include('components/head.html', { "title":"Все Услуги" })
   <body>
     @@include('components/header.html', { })
     @@include('components/burger-menu.html', { })
     <div class="layout">
       @@include('components/side-bar.html', { })
       <main>
-        @@include('components/hero.html', { })
-        @@include('components/popular-services.html', { })
+        @@include('components/all-services/all-services.html', { })
       </main>
     </div>
 
