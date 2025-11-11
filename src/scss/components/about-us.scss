@@ -1,0 +1,199 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.about-us {
+  padding-top: 60px;
+  @media (min-width: $bp-tablet) {
+    padding-top: 80px;
+  }
+  @media (min-width: $bp-laptop) {
+    padding-top: 106px;
+  }
+  @media (min-width: $bp-desktop) {
+    padding-top: 218px;
+  }
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: color(text1);
+    margin-bottom: 56px;
+    text-align: center;
+    @media (min-width: $bp-tablet) {
+      font-size: 42px;
+    }
+    @media (min-width: $bp-laptop) {
+      text-align: left;
+      margin-left: 40px;
+      font-size: 46px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+      margin-bottom: 86px;
+      margin-left: 0;
+    }
+  }
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 80px;
+      padding-left: 98px;
+      @media (min-width: $bp-desktop) {
+        padding-left: 156px;
+        gap: 99px;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    @media (min-width: $bp-laptop) {
+      align-items: flex-start;
+      margin-top: 60px;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-top: 0;
+    }
+  }
+  &__line {
+    position: relative;
+    width: 129px;
+    height: 4px;
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    transform-origin: right center;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: color(osnovnoy);
+      transform: scaleX(1.5);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 18px;
+      transform: translateY(-50%);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.17;
+      color: color(osnovnoy);
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:nth-child(1)::before {
+      content: "1";
+    }
+    &:nth-child(2)::before {
+      content: "2";
+    }
+    &:nth-child(3)::before {
+      content: "3";
+    }
+    &:nth-child(4)::before {
+      content: "4";
+    }
+  }
+
+  &__content-right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 80px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 10px;
+    }
+  }
+  &__content-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    @media (min-width: $bp-laptop) {
+      margin-top: 0;
+      align-items: start;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-top: -60px;
+    }
+  }
+  &__sub-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    margin-bottom: 21px;
+    @media (min-width: $bp-tablet) {
+      font-size: 25px;
+    }
+    @media (min-width: $bp-laptop) {
+      text-align: left;
+      width: 244px;
+      margin-bottom: 31px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 30px;
+    }
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 56px;
+    width: 323px;
+    @media (min-width: $bp-laptop) {
+      margin-bottom: 86px;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 106px;
+    }
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(belyy);
+    border-radius: 16px;
+    padding: 11px 24px;
+    width: 233px;
+    height: 48px;
+    background: color(osnovnoy);
+    transition: all 0.4s ease;
+    border: none;
+    &:hover {
+      background: #2bd9bc;
+    }
+  }
+  &__img-wrapper {
+    @media (min-width: $bp-laptop) {
+      margin-top: -159px;
+    }
+    @media (min-width: $bp-desktop) {
+      flex-shrink: 0;
+      margin-top: -230px;
+    }
+  }
+}
