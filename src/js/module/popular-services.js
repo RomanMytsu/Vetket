@@ -7,6 +7,7 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   modules: [Navigation],
   spaceBetween: 24,
+  grabCursor: true,
   navigation: {
     nextEl: ".popular-services__btn-next",
     prevEl: ".popular-services__btn-prev",

@@ -1,1 +1,123 @@
 @use "../scss/utils/_variables.scss" as *;
+
+.our-specialist {
+  padding-top: 100px;
+  @media (min-width: $bp-tablet) {
+    padding-top: 120px;
+  }
+  @media (min-width: $bp-laptop) {
+    padding-top: 150px;
+  }
+  @media (min-width: $bp-desktop) {
+    padding-top: 242px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 214px;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 50px;
+    }
+    @media (min-width: $bp-laptop) {
+      margin-bottom: 66px;
+      flex-direction: row;
+      align-items: end;
+      gap: 183px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+    br {
+      display: none;
+    }
+    @media (min-width: $bp-tablet) {
+      font-size: 42px;
+      margin-bottom: 42px;
+      br {
+        display: block;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(belyy);
+    border-radius: 16px;
+    padding: 11px 24px;
+    width: 228px;
+    height: 48px;
+    background: color(osnovnoy);
+    transition: all 0.4s ease;
+    border: none;
+    &:hover {
+      background: #2bd9bc;
+    }
+  }
+
+  &__slide-item {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__slide-item-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__slide-item-position {
+    line-height: 1.5;
+    color: color(text2);
+  }
+
+  &__wrapper-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.popular-services__btn-prev,
+.popular-services__btn-next {
+  display: none;
+  @media (min-width: $bp-laptop) {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+  }
+}
