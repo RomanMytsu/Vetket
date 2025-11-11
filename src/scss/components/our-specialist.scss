@@ -1,15 +1,15 @@
 @use "../scss/utils/_variables.scss" as *;
 
 .our-specialist {
-  padding-top: 100px;
+  padding: 100px 0;
   @media (min-width: $bp-tablet) {
-    padding-top: 120px;
+    padding: 120px 0;
   }
   @media (min-width: $bp-laptop) {
-    padding-top: 150px;
+    padding: 150px 0;
   }
   @media (min-width: $bp-desktop) {
-    padding-top: 242px;
+    padding: 242px 0 187px;
   }
 
   &__container {
