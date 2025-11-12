@@ -1,0 +1,149 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.instagram {
+  background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+  padding: 66px 0 104px;
+  @media (min-width: $bp-laptop) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 47%;
+      width: 850px;
+      height: 480px;
+      background: url("../img/instagram/img-bg.webp") no-repeat center / contain;
+      z-index: 2;
+      transform: rotate(-2deg);
+      background-size: auto;
+    }
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__hearts {
+    display: none;
+    @media (min-width: $bp-laptop) {
+      display: block;
+
+      &-big {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+      }
+      &-average {
+        position: absolute;
+        top: 58.5%;
+        left: 67.6%;
+      }
+      &-small {
+        position: absolute;
+        top: 68.8%;
+        left: 61.5%;
+      }
+      &-small-very {
+        position: absolute;
+        top: 68.4%;
+        left: 56%;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+    margin-bottom: 28px;
+    @media (min-width: $bp-tablet) {
+      font-size: 42px;
+      margin-bottom: 38px;
+      text-align: center;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+      text-align: left;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &__content-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    @media (min-width: $bp-tablet) {
+      place-content: center;
+    }
+    @media (min-width: $bp-laptop) {
+      place-content: flex-start;
+    }
+  }
+
+  &__left-img {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  &__left-icon {
+    display: grid;
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__left-link {
+    background: color(belyy);
+    text-align: center;
+    padding: 68px 40px;
+    width: 178px;
+    @media (min-width: $bp-tablet) {
+      padding: 53px 40px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 61px 50px 60px 44px;
+    }
+  }
+  &__follower {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    @media (min-width: $bp-desktop) {
+      font-size: 30px;
+    }
+  }
+
+  &__follower-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71;
+    color: color(osnovnoy);
+  }
+
+  &__right-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 56px;
+    background: color(belyy);
+    border-top-right-radius: 16px;
+    width: 178px;
+  }
+}
