@@ -1,0 +1,137 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.blog {
+  padding: 100px 0 75px;
+  @media (min-width: $bp-tablet) {
+    padding: 130px 0 75px;
+  }
+  @media (min-width: $bp-desktop) {
+    padding: 154px 0 75px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 50px;
+    }
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: end;
+      justify-content: space-between;
+    }
+    @media (min-width: $bp-laptop) {
+      margin-bottom: 66px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 122px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+    @media (min-width: $bp-tablet) {
+      font-size: 42px;
+      margin-bottom: 42px;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(belyy);
+    border-radius: 16px;
+    padding: 11px 24px;
+    width: 215px;
+    height: 48px;
+    background: color(osnovnoy);
+    transition: all 0.4s ease;
+    border: none;
+    &:hover {
+      background: #2bd9bc;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+
+  &__img-wrapper {
+    @media (min-width: $bp-desktop) {
+      flex-shrink: 0;
+    }
+  }
+
+  &__sub-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    margin: 20px 0 15px;
+    @media (min-width: $bp-desktop) {
+      font-size: 30px;
+      width: 728px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 1.43;
+    color: color(text3);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  &__item {
+    border-top: 1px solid color(grani);
+    padding-top: 15px;
+  }
+
+  &__item-text {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.18;
+    margin-bottom: 6px;
+    @media (min-width: $bp-desktop) {
+      font-size: 17px;
+    }
+  }
+}
