@@ -1,0 +1,80 @@
+<div class="backdrop">
+  <div class="appointment-modal">
+    <div class="appointment-modal__container container">
+      <button class="appointment-modal__btn-close modal-btn-close">
+        <svg class="appointment-moda-icon-close" width="18" height="18">
+          <use href="@img/sprite.svg#close-apo"></use>
+        </svg>
+      </button>
+      <h2 class="appointment-modal__title">Запись на прием</h2>
+      <form class="appointment-modal__form">
+        <label class="appointment-modal__form-label">
+          <span class="appointment-modal__form-label-text">Имя и фамилия</span>
+          <input required type="text" name="name" />
+        </label>
+        <label class="appointment-modal__form-label">
+          <span class="appointment-modal__form-label-text">Телефон</span>
+          <input required type="tel" name="phone" />
+        </label>
+        <div class="appointment-modal__department-wrapper">
+          <div class="appointment-modal__department-group">
+            <p class="appointment-modal__department-title">Филиал центра</p>
+            <div class="appointment-modal__department-btns">
+              <input type="radio" name="branch" id="strogino" checked />
+              <label for="strogino" class="appointment-modal__btn-checked"
+                >Строгино</label
+              >
+
+              <input type="radio" name="branch" id="donskoy" />
+              <label for="donskoy" class="appointment-modal__btn-checked"
+                >Донской</label
+              >
+            </div>
+          </div>
+          <label class="appointment-modal__date-apo-label">
+            Дата приема
+            <input
+              autocomplete="off"
+              id="date"
+              type="text"
+              class="input-date"
+            />
+          </label>
+        </div>
+        <div class="appointment-modal__field-animal">
+          <div class="appointment-modal__field-animal-text-wrapper">
+            <label class="appointment-modal__field-animal-label" for="pet-name"
+              >Кто ваш питомец?</label
+            >
+            <p>например, кот Кокос</p>
+          </div>
+
+          <input type="text" id="pet-name" placeholder="" />
+        </div>
+        <div class="appointment-modal__field-animal-message">
+          <label
+            class="appointment-modal__field-animal-message-label"
+            for="message"
+            >Сообщение <span>(необязательно)</span></label
+          >
+          <p class="form-hint">
+            Можете описать проблему вашего питомца или указать специалиста, к
+            которому хотите попасть на прием
+          </p>
+          <textarea id="message" class="form-textarea"></textarea>
+        </div>
+        <div class="appointment-modal__end">
+          <label class="appointment-modal__end-policy">
+            <input required type="checkbox" />
+            <p>
+              Я согласен с <span>условиями обработки персональных данных</span>
+            </p>
+          </label>
+          <button type="submit" class="appointment-modal__end-btn">
+            Записаться
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

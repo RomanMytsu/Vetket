@@ -1,0 +1,404 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.body-lock {
+  overflow: hidden;
+}
+.backdrop {
+  background: rgba(25, 34, 36, 0.9);
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 15px;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  opacity: 0;
+  @media (min-width: $bp-tablet) {
+    padding: 24px 30px;
+  }
+  @media (min-width: $bp-laptop) {
+    padding: 0;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appointment-modal {
+  background-color: color(belyy);
+  border-radius: 26px;
+  padding: 64px 30px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  overflow-y: auto;
+  position: relative;
+  @media (min-width: $bp-tablet) {
+    padding: 66px 80px;
+  }
+  @media (min-width: $bp-laptop) {
+    padding: 66px 80px 88px;
+    width: 608px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    svg {
+      stroke-width: 2px;
+      stroke: color(ikonki-uslugi);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+    @media (min-width: $bp-laptop) {
+      font-size: 48px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    &-label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      &-text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        color: color(text2);
+        @media (min-width: $bp-laptop) {
+          width: 140px;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: $bp-laptop) {
+        flex-direction: row;
+        gap: 44px;
+        align-items: center;
+        margin-bottom: 8px;
+        &:nth-child(2) {
+          margin-bottom: 24px;
+        }
+      }
+
+      input {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        margin-top: 6px;
+        outline: 0;
+        @media (min-width: $bp-laptop) {
+          width: 100%;
+          width: 284px;
+          height: 40px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__department-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 63px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5;
+      color: color(text2);
+    }
+  }
+
+  &__department-btns {
+    display: flex;
+    border-radius: 20px;
+    background: color(belyy2);
+    box-shadow: inset 0 0 3px 0 rgba(13, 61, 46, 0.4);
+    padding: 11px 24px 13px;
+    gap: 10px;
+    align-items: center;
+    @media (min-width: $bp-tablet) {
+      width: 236px;
+    }
+    @media (min-width: $bp-laptop) {
+      gap: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    #strogino:checked + label,
+    #donskoy:checked + label {
+      background: #19c7b3;
+      color: #fff;
+      padding: 7px 20px 9px;
+    }
+  }
+
+  &__btn-checked {
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: background 0.4s, color 0.4s;
+    margin-bottom: 0;
+  }
+
+  &__date-apo-label {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: color(text2);
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 85px;
+    }
+
+    input {
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 6px;
+      outline: 0;
+      transition: border 0.4s;
+      @media (min-width: $bp-laptop) {
+        width: 236px;
+        height: 40px;
+        margin-top: 0;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      width: 24px;
+      height: 24px;
+      background: url("../img/calendar.svg") no-repeat center / contain;
+      pointer-events: none;
+      @media (min-width: $bp-laptop) {
+        right: 37px;
+        bottom: 7px;
+      }
+    }
+  }
+
+  &__field-animal {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 19px;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: baseline;
+      gap: 40px;
+    }
+
+    &-text-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-label {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5;
+      color: color(text2);
+      white-space: nowrap;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.43;
+      color: color(text3);
+      white-space: nowrap;
+    }
+    input {
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 6px;
+      outline: 0;
+      transition: border 0.4s;
+      @media (min-width: $bp-laptop) {
+        width: 284px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__field-animal-message {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 19px;
+    @media (min-width: $bp-laptop) {
+      margin: 0 0 40px;
+    }
+
+    &-label {
+      font-weight: 700;
+      line-height: 1.5;
+      color: color(text2);
+
+      span {
+        font-size: 14px;
+        line-height: 1.43;
+        color: color(text3);
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.43;
+      color: color(text3);
+    }
+    .form-textarea {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 10px;
+      outline: 0;
+      transition: border 0.2s;
+      min-height: 160px;
+      width: 100%;
+    }
+  }
+
+  &__end {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 17px;
+    }
+
+    &-policy {
+      display: flex;
+      gap: 11px;
+      font-size: 13px;
+      line-height: 1.29;
+      color: color(text2);
+      margin-bottom: 19px;
+      @media (min-width: $bp-laptop) {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &-btn {
+      border-radius: 15px;
+      min-width: 160px;
+      height: 48px;
+      background: color(osnovnoy);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: color(belyy);
+      border: none;
+      align-self: center;
+      padding: 0;
+    }
+  }
+}
+
+.air-datepicker {
+  border-radius: 4px;
+  box-shadow: 4px 8px 16px 0 rgba(20, 74, 63, 0.15);
+  z-index: 101;
+  position: absolute;
+}
+
+.air-datepicker--content {
+  padding: 5px 16px 7px !important;
+}
+
+.air-datepicker-cell.-selected- {
+  color: color(osnovnoy);
+}
+
+.air-datepicker-nav {
+  background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+  padding: 10px;
+}
+
+.air-datepicker-nav--title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  color: color(text1) !important;
+
+  i {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    color: color(text1) !important;
+  }
+}
+
+.air-datepicker-nav--action svg {
+  stroke: #333;
+  width: 18px;
+  height: 18px;
+}
+
+.input-date {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+.air-datepicker-body--day-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: color(text1) !important;
+}
+.air-datepicker-body--day-names {
+  margin: 0 !important;
+}

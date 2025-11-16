@@ -3,15 +3,17 @@
 @use "./base.scss";
 
 @use "./components/header.scss";
-@use "./components/hero.scss";
-@use "./components/popular-services.scss";
-@use "./components/about-us.scss";
-@use "./components/our-specialist.scss";
-@use "./components/stories.scss";
-@use "./components/blog.scss";
-@use "./components/instagram.scss";
-@use "./components/contacts.scss";
+@use "./sections/home-page/hero.scss";
+@use "./sections/home-page/popular-services.scss";
+@use "./sections/home-page/about-us.scss";
+@use "./sections/home-page/our-specialist.scss";
+@use "./sections/home-page/stories.scss";
+@use "./sections/home-page/blog.scss";
+@use "./sections/home-page/instagram.scss";
+@use "./sections/home-page/contacts.scss";
+@use "./components/footer.scss";
 
-@use "./components/all-services/all-services.scss";
+@use "./sections/all-services/all-services.scss";
 @use "./components/burger-menu.scss";
 @use "./components/side-bar.scss";
+@use "./components/appointment-modal.scss";

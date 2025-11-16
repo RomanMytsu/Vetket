@@ -3,21 +3,22 @@
   @@include('components/head.html', { "title":"Главная" })
   <body>
     @@include('components/header.html', { })
-    @@include('components/burger-menu.html', { })
     <div class="layout">
       @@include('components/side-bar.html', { })
       <main>
-        @@include('components/hero.html', { })
-        @@include('components/popular-services.html', { })
-        @@include('components/about-us.html', { })
-        @@include('components/our-specialist.html', { })
-        @@include('components/stories.html', { })
-        @@include('components/blog.html', { })
-        @@include('components/instagram.html', { })
-        @@include('components/contacts.html', { })
+        @@include('sections/home-page/hero.html', { })
+        @@include('sections/home-page/popular-services.html', { })
+        @@include('sections/home-page/about-us.html', { })
+        @@include('sections/home-page/our-specialist.html', { })
+        @@include('sections/home-page/stories.html', { })
+        @@include('sections/home-page/blog.html', { })
+        @@include('sections/home-page/instagram.html', { })
+        @@include('sections/home-page/contacts.html', { })
+        @@include('components/footer.html', { })
       </main>
     </div>
-
+    @@include('components/burger-menu.html', { })
+    @@include('components/appointment-modal.html', { })
     <script src="js/main.min.js"></script>
   </body>
 </html>

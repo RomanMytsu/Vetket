@@ -2,13 +2,12 @@ const burgerBtn = document.querySelector(".header__burger-menu");
 const menu = document.querySelector(".burger-menu");
 
 if (burgerBtn && menu) {
-  // Запоминаем исходное положение кнопки
   const originalParent = burgerBtn.parentElement;
   const nextSibling = burgerBtn.nextElementSibling;
 
   const open = () => {
     burgerBtn.classList.add("active");
-    menu.appendChild(burgerBtn); // перемещаем в меню
+    menu.appendChild(burgerBtn);
     menu.style.display = "block";
     setTimeout(() => menu.classList.add("active"), 20);
     document.body.style.overflow = "hidden";
@@ -18,7 +17,6 @@ if (burgerBtn && menu) {
     burgerBtn.classList.remove("active");
     menu.classList.remove("active");
     setTimeout(() => {
-      // возвращаем на исходное место
       if (nextSibling && nextSibling.parentElement === originalParent) {
         originalParent.insertBefore(burgerBtn, nextSibling);
       } else {
