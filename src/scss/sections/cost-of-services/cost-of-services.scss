@@ -1,0 +1,222 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.cost-of-services {
+  padding: 57px 0 86px;
+  @media (min-width: $bp-laptop) {
+    padding: 57px 0 116px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+    margin-bottom: 20px;
+    @media (min-width: $bp-laptop) {
+      font-size: 48px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 1.38;
+    margin-bottom: 20px;
+    @media (min-width: $bp-laptop) {
+      font-size: 26px;
+      margin-bottom: 36px;
+      width: 824px;
+    }
+  }
+
+  &__filters-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+    @media (min-width: $bp-laptop) {
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn {
+    border-radius: 4px;
+    background: color(fon3);
+    padding: 7px 10px 9px;
+    border: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    @media (min-width: $bp-laptop) {
+      font-size: 16px;
+      padding: 7px 17px 9px 14px;
+    }
+
+    &:hover {
+      color: color(belyy);
+      background: color(osnovnoy);
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 0 rgba(49, 53, 54, 0.05);
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 28px 10px;
+    margin-bottom: 30px;
+    @media (min-width: $bp-laptop) {
+      padding: 48px 56px;
+      margin-bottom: 48px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px 10px 10px;
+      border: 2px solid color(osnovnoy);
+      border-right: none;
+      border-radius: 16px 0 0 16px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: color(text4);
+      outline: none;
+      @media (min-width: $bp-laptop) {
+        padding: 9px 0 10px 20px;
+        font-size: 16px;
+      }
+
+      &::placeholder {
+        color: color(text4);
+      }
+    }
+
+    button {
+      padding: 11px 16px;
+      background: #25c2a0;
+      border: none;
+      border-radius: 0 16px 16px 0;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+      color: color(belyy);
+      @media (min-width: $bp-laptop) {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+    }
+  }
+
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      gap: 30px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__wrapper {
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 0 rgba(49, 53, 54, 0.05);
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 35px 35px;
+    @media (min-width: $bp-desktop) {
+      padding: 35px 56px 55px;
+      width: 536px;
+    }
+  }
+
+  &__title-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 7px;
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 1.43;
+    color: color(text2);
+    @media (min-width: $bp-laptop) {
+      font-size: 14px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: color(grani);
+    margin: 19px 0 12px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    @media (min-width: $bp-laptop) {
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.41;
+    @media (min-width: $bp-laptop) {
+      font-size: 17px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+      line-height: 1.41;
+      @media (min-width: $bp-laptop) {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (min-width: $bp-laptop) {
+      gap: 40px;
+    }
+  }
+}
