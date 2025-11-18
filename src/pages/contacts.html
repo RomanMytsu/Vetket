@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('components/head.html', { "title":"Контакты" })
+  <body>
+    @@include('components/header.html', { })
+    <div class="layout">
+      @@include('components/side-bar.html', { })
+      <main>
+        @@include('sections/contacts/contact.html', { })
+        @@include('components/footer.html', { })
+      </main>
+    </div>
+    @@include('components/burger-menu.html', { })
+    @@include('components/appointment-modal.html', { })
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
