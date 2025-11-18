@@ -1,0 +1,143 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.our-mission {
+  background: color(fon2);
+  padding: 0 0 86px;
+  @media (min-width: $bp-laptop) {
+    padding: 0 0 189px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__title-wrapper {
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 57px 0 24px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+    @media (min-width: $bp-tablet) {
+      font-size: 30px;
+    }
+    @media (min-width: $bp-desktop) {
+      font-size: 48px;
+      margin-bottom: 46px;
+    }
+  }
+
+  &__links-wrapper {
+    box-shadow: inset 0 0 3px 0 rgba(13, 61, 46, 0.4);
+    background: color(belyy2);
+    border-radius: 20px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+    max-width: 400px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(text3);
+    padding: 8px 18px;
+    @media (min-width: $bp-laptop) {
+      font-size: 16px;
+    }
+
+    &.active {
+      background: color(osnovnoy);
+      border-radius: 16px;
+      color: color(belyy);
+    }
+  }
+
+  &__top-text-wrapper {
+    margin-top: 38px;
+
+    @media (min-width: $bp-laptop) {
+      margin-top: 68px;
+    }
+  }
+
+  &__top-text {
+    font-size: 18px;
+    line-height: 1.38;
+    margin-bottom: 19px;
+    max-width: 800px;
+    @media (min-width: $bp-laptop) {
+      font-size: 26px;
+    }
+  }
+
+  &__top-text-description {
+    font-size: 12px;
+    line-height: 1.65;
+    max-width: 824px;
+    &:nth-of-type(3) {
+      margin-bottom: 15px;
+      @media (min-width: $bp-laptop) {
+        margin-bottom: 20px;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 17px;
+    }
+  }
+
+  &__img {
+    margin: 23px 0 21px;
+    @media (min-width: $bp-laptop) {
+      margin: 53px 0 51px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    margin-bottom: 15px;
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__licenses-wrapper {
+    margin-top: 24px;
+    @media (min-width: $bp-laptop) {
+      margin-top: 44px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 214px;
+    }
+  }
+
+  &__licenses-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.17;
+    margin-bottom: 22px;
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+      margin-bottom: 42px;
+      margin-left: 40px;
+    }
+  }
+}
