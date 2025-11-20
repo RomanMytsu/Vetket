@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2" />
   <link rel="stylesheet" href="css/style.min.css?_v=20251120123634" />
-  <title>Стоимость услуг клиники</title>
+  <title>Фотогалерея</title>
 </head>
 
   <body>
@@ -126,66 +126,132 @@
 </aside>
 
       <main>
-        <section class="cost-of-services">
-  <div class="cost-of-services__container container">
-    <div class="all-services__nav">
-      <a href="index.html">Главная</a>
-      <svg width="15" height="8">
-        <use href="img/sprite.svg#popular_services--aroww-nav"></use>
-      </svg>
-      <p>Стоимость</p>
-    </div>
-    <h2 class="cost-of-services__title">Стоимость услуг клиники</h2>
-    <p class="cost-of-services__subtitle">
-      Для удобства все собрали цены на все услуги в одном месте. Выберите
-      специализацию и воспользуйтесь поиском.
-    </p>
-    <div class="cost-of-services__filters-btn-wrapper">
-      <button class="cost-of-services__btn">Все услуги</button>
-      <button class="cost-of-services__btn">Вакцинация и чипирование</button>
-      <button class="cost-of-services__btn">Вызов врача на дом</button>
-      <button class="cost-of-services__btn">Гастроэнтерология</button>
-      <button class="cost-of-services__btn">Гостиница для животных</button>
-      <button class="cost-of-services__btn">Груминг</button>
-      <button class="cost-of-services__btn">Дерматология</button>
-      <button class="cost-of-services__btn">Кардиология</button>
-      <button class="cost-of-services__btn">Кастрация</button>
-      <button class="cost-of-services__btn">Лабораторная диагностика</button>
-      <button class="cost-of-services__btn">Нефрология</button>
-      <button class="cost-of-services__btn">Онкология</button>
-      <button class="cost-of-services__btn">Ортопедия</button>
-      <button class="cost-of-services__btn">Офтальмология</button>
-      <button class="cost-of-services__btn">
-        Реанимация и интенсивная терапия
-      </button>
-      <button class="cost-of-services__btn">Рентген</button>
-      <button class="cost-of-services__btn">Репродуктология</button>
-      <button class="cost-of-services__btn">Стационар</button>
-      <button class="cost-of-services__btn">Стоматология</button>
-      <button class="cost-of-services__btn">Терапия</button>
-      <button class="cost-of-services__btn">Травматология</button>
-      <button class="cost-of-services__btn">УЗИ</button>
-      <button class="cost-of-services__btn">Хирургия</button>
-      <button class="cost-of-services__btn">Эвтаназия</button>
-      <button class="cost-of-services__btn">Эндокринология</button>
-    </div>
-    <div class="cost-of-services__search">
-      <input type="text" placeholder="Введите название услуги" />
-      <button>Найти</button>
-    </div>
-    <div class="cost-of-services__price-wrapper">
-      <div
-        class="cost-of-services__vaccination cost-of-services__wrapper"
-      ></div>
-      <div class="cost-of-services__right">
-        <div
-          class="cost-of-services__dermatology cost-of-services__wrapper"
-        ></div>
-        <div
-          class="cost-of-services__resuscitation cost-of-services__wrapper"
-        ></div>
+        <section class="gallery">
+  <div class="our-mission__title-wrapper">
+    <div class="our-mission__container container">
+      <div class="all-services__nav">
+        <a href="index.html">Главная</a>
+        <svg width="15" height="8">
+          <use href="img/sprite.svg#popular_services--aroww-nav"></use>
+        </svg>
+        <p>Фотогалерея</p>
+      </div>
+      <h2 class="our-mission__title">Ветеренарный центр «ВетКэт»</h2>
+      <div class="our-mission__links-wrapper">
+        <a href="our-mission.html" class="our-mission__link">Наша миссия</a>
+        <a href="gallery.html" class="our-mission__link active">Фотогалерея</a>
+        <a href="#" class="our-mission__link">Отзывы</a>
       </div>
     </div>
+  </div>
+
+  <div class="gallery__container container">
+    <ul class="gallery__list">
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/out-pacient.webp" type="image/webp"><img src="img/gallery/out-pacient.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <p class="gallery__text">Наши пациенты</p>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/animal.webp" type="image/webp"><img src="img/gallery/animal.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <p class="gallery__text">Передержка животных</p>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/vet-centr.webp" type="image/webp"><img src="img/gallery/vet-centr.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <div>
+            <p class="gallery__text">Ветеринарный центр</p>
+            <div class="gallery__icon-wrapper">
+              <svg width="16" height="16">
+                <use href="img/sprite.svg#gallery--tag"></use>
+              </svg>
+              <p class="gallery__icon-text">Приморский</p>
+            </div>
+          </div>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/hospital.webp" type="image/webp"><img src="img/gallery/hospital.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <div>
+            <p class="gallery__text">Стационар</p>
+            <div class="gallery__icon-wrapper">
+              <svg width="16" height="16">
+                <use href="img/sprite.svg#gallery--tag"></use>
+              </svg>
+              <p class="gallery__icon-text">Приморский</p>
+            </div>
+          </div>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/vet-centr-2.webp" type="image/webp"><img src="img/gallery/vet-centr-2.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <div>
+            <p class="gallery__text">Ветеринарный центр</p>
+            <div class="gallery__icon-wrapper">
+              <svg width="16" height="16">
+                <use href="img/sprite.svg#gallery--tag"></use>
+              </svg>
+              <p class="gallery__icon-text">Приморский</p>
+            </div>
+          </div>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="gallery__item">
+        <picture><source srcset="img/gallery/hospital-2.webp" type="image/webp"><img src="img/gallery/hospital-2.webp" alt="Image our pacient" /></picture>
+        <div class="gallery__content">
+          <div>
+            <p class="gallery__text">Стационар</p>
+            <div class="gallery__icon-wrapper">
+              <svg width="16" height="16">
+                <use href="img/sprite.svg#gallery--tag"></use>
+              </svg>
+              <p class="gallery__icon-text">Приморский</p>
+            </div>
+          </div>
+          <button class="gallery__btn btn-open-gallery">
+            Смотреть
+            <svg width="19" height="10">
+              <use href="img/sprite.svg#arrow-contac"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -357,6 +423,101 @@
           </button>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+    <div class="gallery-modal" id="galleryModal">
+  <button class="gallery-modal__close">
+    <svg width="24" height="24">
+      <use href="img/sprite.svg#gallery--modal-close"></use>
+    </svg>
+  </button>
+  <div class="gallery-modal__title-wrapper">
+    <h2 class="gallery-modal__title">Ветеринарный центр</h2>
+    <div class="gallery-modal__icon-wrapper">
+      <svg width="16" height="16">
+        <use href="img/sprite.svg#gallery--tag"></use>
+      </svg>
+      <p class="gallery-modal__icon-text">Приморский</p>
+    </div>
+  </div>
+  <button class="gallery-modal__button-prev">
+    <svg width="32" height="32">
+      <use href="img/sprite.svg#popular_services--prev-icon"></use>
+    </svg>
+  </button>
+  <div class="swiper mainSwiper gallery-modal__mainSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture><source srcset="img/gallery/swip-img.webp" type="image/webp"><img src="img/gallery/swip-img.webp" /></picture>
+      </div>
+    </div>
+  </div>
+  <button class="gallery-modal__button-next">
+    <svg width="32" height="32">
+      <use href="img/sprite.svg#popular_services--next-icon"></use>
+    </svg>
+  </button>
+  <div class="swiper thumbsSwiper gallery-modal__thumbsSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
+      <div class="swiper-slide gallery-modal__slide">
+        <picture><source srcset="img/gallery/prewiev.webp" type="image/webp"><img src="img/gallery/prewiev.webp" /></picture>
+      </div>
     </div>
   </div>
 </div>

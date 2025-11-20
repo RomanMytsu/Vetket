@@ -1,0 +1,143 @@
+@use "../scss/utils/_variables.scss" as *;
+
+
+
+.gallery {
+  background: color(fon2);
+  padding: 0 0 86px;
+  @media (min-width: $bp-laptop) {
+    padding: 0 0 111px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 34px;
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $bp-laptop) {
+      margin-top: 64px;
+      justify-items: baseline;
+      gap: 30px;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+    }
+
+    &:hover {
+      .gallery__text {
+        color: color(osnovnoy);
+      }
+
+      .gallery__btn {
+        opacity: 1;
+        transform: translateX(110px);
+        @media (min-width: $bp-laptop) {
+          transform: translateX(80px);
+        }
+        @media (min-width: $bp-desktop) {
+          transform: translateX(124px);
+        }
+      }
+
+      svg {
+        fill: color(osnovnoy);
+      }
+      .gallery__icon-text {
+        color: color(osnovnoy);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px 0 rgba(26, 57, 63, 0.1);
+    background: color(belyy);
+    flex: 1;
+    position: relative;
+    padding: 24px 24px 25px;
+    @media (min-width: $bp-laptop) {
+      padding: 28px 24px 29px;
+      width: 272px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+    @media (min-width: $bp-laptop) {
+      font-size: 20px;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+
+    svg {
+      fill: color(logo);
+    }
+  }
+
+  &__icon-text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: color(text3);
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: right;
+    color: color(osnovnoy);
+    background-color: transparent;
+    border: none;
+    transform: translateX(0);
+    transition: all 0.4s ease;
+    padding: 0;
+    opacity: 0;
+
+    svg {
+      stroke-width: 2px;
+      stroke: color(osnovnoy);
+    }
+  }
+}
