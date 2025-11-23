@@ -20,7 +20,10 @@
 @use "./sections/our-mission/our-mission.scss";
 @use "./sections/gallery/gallery.scss";
 @use "./sections/gallery/modal-gallery/modal-gallery.scss";
+@use "./sections/reviews/reviews.scss";
 
 @use "./components/burger-menu.scss";
 @use "./components/side-bar.scss";
 @use "./components/appointment-modal.scss";
+@use "./sections/reviews/modal/review-modal.scss";
+@use "./sections/reviews/modal/reviews-full.scss";

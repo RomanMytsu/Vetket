@@ -1,0 +1,131 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.reviews {
+  background: color(fon2);
+  padding: 0 0 86px;
+  @media (min-width: $bp-laptop) {
+    padding: 0 0 126px;
+  }
+
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+
+  &__sub-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 38px 0 20px;
+    @media (min-width: $bp-laptop) {
+      margin: 68px 0 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__sub-title {
+    font-size: 20px;
+    line-height: 1.38;
+    margin-bottom: 20px;
+    @media (min-width: $bp-laptop) {
+      font-size: 26px;
+    }
+  }
+
+  &__btn {
+    border-radius: 16px;
+    padding: 11px 24px;
+    width: 174px;
+    height: 48px;
+    background: color(osnovnoy);
+    border: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(belyy);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    @media (min-width: $bp-laptop) {
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px 0 rgba(26, 57, 63, 0.1);
+    background: color(belyy);
+    padding: 24px;
+    height: 288px;
+    @media (min-width: $bp-laptop) {
+      padding: 27px 32px 41px;
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    &-text {
+      font-size: 17px;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: auto;
+    }
+
+    &-time {
+      font-size: 14px;
+      line-height: 1.71;
+      color: color(text3);
+    }
+
+    &-btn {
+      background-color: transparent;
+      border: none;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: right;
+      color: color(osnovnoy);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        stroke-width: 2px;
+        stroke: color(osnovnoy);
+      }
+    }
+  }
+
+  &__item-time-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

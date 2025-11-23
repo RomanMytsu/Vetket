@@ -69,11 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch("http://localhost:1337/api/appointments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data }),
-      });
+      const response = await fetch(
+        "https://capable-leader-adecf1b424.strapiapp.com/api/appointments",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ data }),
+        }
+      );
 
       if (!response.ok) {
         console.error(await response.json());

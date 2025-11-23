@@ -1,5 +1,7 @@
 async function loadVaccination() {
-  const res = await fetch("http://localhost:1337/api/vaccination");
+  const res = await fetch(
+    "https://capable-leader-adecf1b424.strapiapp.com/api/vaccination"
+  );
   const categories = await res.json();
 
   const root = document.querySelector(".cost-of-services__vaccination");
@@ -37,9 +39,7 @@ async function loadVaccination() {
     .map(
       ({ title, description, subcategories }) => `
         <h3 class="cost-of-services__title-price">${title}</h3>
-        <p class="cost-of-services__description">${
-          description ?? ""
-        }</p>
+        <p class="cost-of-services__description">${description ?? ""}</p>
         <hr class="cost-of-services__line" />
         ${renderSubcategories(subcategories)}
     `
@@ -50,7 +50,9 @@ async function loadVaccination() {
 loadVaccination();
 
 async function loadDermatology() {
-  const res = await fetch("http://localhost:1337/api/dermatology");
+  const res = await fetch(
+    "https://capable-leader-adecf1b424.strapiapp.com/api/dermatology"
+  );
   const categories = await res.json();
 
   const root = document.querySelector(".cost-of-services__dermatology");
@@ -94,7 +96,9 @@ async function loadDermatology() {
 loadDermatology();
 
 async function loadResuscitation() {
-  const res = await fetch("http://localhost:1337/api/reanimation");
+  const res = await fetch(
+    "https://capable-leader-adecf1b424.strapiapp.com/api/reanimation"
+  );
   const categories = await res.json();
 
   const root = document.querySelector(".cost-of-services__resuscitation");

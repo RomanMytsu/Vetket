@@ -4,3 +4,6 @@ import "./module/stories.js";
 import "./module/modal/appointment-modal.js";
 import "./module/coast-of-services.js";
 import "./module/modal/gallery-modal.js";
+import "./module/modal/reviews/review-modal.js";
+import "./module/api/api-reviews.js";
+import "./module/modal/reviews/reviews-full.js";

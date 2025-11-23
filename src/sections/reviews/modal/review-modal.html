@@ -1,0 +1,76 @@
+<div class="backdrop-reviews">
+  <div class="review-modal">
+    <div class="review-modal__container container">
+      <button class="review-modal__btn-close modal-btn-close-review">
+        <svg class="appointment-moda-icon-close" width="18" height="18">
+          <use href="@img/sprite.svg#close-apo"></use>
+        </svg>
+      </button>
+      <h2 class="review-modal__title">Оставить отзыв</h2>
+      <form class="review-modal__form">
+        <div class="review-modal__group">
+          <label for="specialist" class="review-modal__label">Специалист</label>
+          <div class="custom-select" data-select>
+            <button
+              class="custom-select__trigger"
+              data-select-trigger
+              type="button"
+            >
+              <span class="custom-select__value"
+                >Малинина Валерия Викторовна</span
+              >
+            </button>
+
+            <ul class="custom-select__list" data-select-list>
+              <li class="custom-select__option" data-select-option>
+                Малинина Валерия Викторовна
+              </li>
+              <li class="custom-select__option" data-select-option>
+                Ярославская Екатерина Ивановна
+              </li>
+            </ul>
+
+            <input
+              type="hidden"
+              name="specialist_name"
+              value="Малинина Валерия Викторовна"
+              data-select-input
+            />
+          </div>
+        </div>
+        <div class="review-modal__group">
+          <textarea
+            class="review-modal__textarea"
+            name="review_text"
+          ></textarea>
+        </div>
+
+        <div class="review-modal__row">
+          <div class="review-modal__group review-modal__group-small">
+            <label class="review-modal__label">Ваше имя</label>
+            <input type="text" class="review-modal__input" name="user_name" />
+          </div>
+
+          <div class="review-modal__group review-modal__group-small">
+            <label class="review-modal__label">E-mail для ответа</label>
+            <input type="email" class="review-modal__input" name="user_email" />
+          </div>
+        </div>
+
+        <div class="review-modal__checkbox-wrapper">
+          <label class="review-modal__checkbox">
+            <input
+              type="checkbox"
+              class="review-modal__checkbox-input"
+              name="privacy_consent"
+            />
+            <p class="review-modal__checkbox-text">
+              <span>Я согласен</span> с условиями обработки персональных данных
+            </p>
+          </label>
+          <button class="review-modal__submit" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
