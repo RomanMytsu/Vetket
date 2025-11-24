@@ -1,6 +1,7 @@
-document
-  .querySelector(".review-modal__form")
-  .addEventListener("submit", async (e) => {
+const reviewForm = document.querySelector(".review-modal__form");
+
+if (reviewForm) {
+  reviewForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -18,18 +19,12 @@ document
         "https://capable-leader-adecf1b424.strapiapp.com/api/reviews",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            data: data,
-          }),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ data }),
         }
       );
 
-      if (!res.ok) {
-        throw new Error("Ошибка отправки");
-      }
+      if (!res.ok) throw new Error("Ошибка отправки");
 
       console.log("Отзыв отправлен!");
       form.reset();
@@ -37,6 +32,9 @@ document
       console.error(err);
     }
   });
+} else {
+  console.warn("review-modal__form NOT FOUND → form handler skipped");
+}
 
 async function loadReviews() {
   try {
@@ -66,6 +64,10 @@ function formatDateYMD(dateString) {
 
 loadReviews().then((reviews) => {
   const container = document.querySelector(".reviews__list");
+  if (!container) {
+    console.warn("reviews__list not found — skip rendering");
+    return;
+  }
 
   container.innerHTML = reviews
     .map((item) => {
@@ -74,17 +76,16 @@ loadReviews().then((reviews) => {
           <p class="reviews__item-name">${item.user_name}</p>
           <p class="reviews__item-text">${item.review_text}</p>
           <div class="reviews__item-time-wrapper">
-          <p class="reviews__item-time">${formatDateYMD(item.createdAt)}</p>
-          <button data-name="${item.user_name}" data-text="${
+            <p class="reviews__item-time">${formatDateYMD(item.createdAt)}</p>
+            <button data-name="${item.user_name}" data-text="${
         item.review_text
       }" class="reviews__item-btn">
-               Читать полностью
-            <svg width="19" height="10">
-             <use href="img/sprite.svg#arrow-contac"></use>
-             </svg>
-          </button>
+              Читать полностью
+              <svg width="19" height="10">
+                <use href="img/sprite.svg#arrow-contac"></use>
+              </svg>
+            </button>
           </div>
-          
         </li>
       `;
     })
