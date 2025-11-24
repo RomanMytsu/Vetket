@@ -1,0 +1,23 @@
+@use "../scss/utils/_variables.scss" as *;
+
+.articles {
+  padding: 0 0 86px;
+  @media (min-width: $bp-laptop) {
+    padding: 0 0 118px;
+  }
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+  &__links-wrapper {
+    max-width: 303px;
+  }
+}

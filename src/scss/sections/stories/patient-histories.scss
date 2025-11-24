@@ -43,6 +43,13 @@
       height: 344px;
     }
 
+    &:hover {
+      .patient-histories__item-content-text,
+      .patient-histories__item-content-date {
+        color: color(osnovnoy);
+      }
+    }
+
     &:nth-child(7n + 1),
     &:nth-child(7n + 2),
     &:nth-child(7n + 3) {
@@ -64,8 +71,10 @@
     &:nth-child(7n + 5) img,
     &:nth-child(7n + 6) img,
     &:nth-child(7n + 7) img {
-      width: 248px;
-      height: 248px;
+      @media (min-width: $bp-laptop) {
+        width: 248px;
+        height: 248px;
+      }
     }
   }
 
