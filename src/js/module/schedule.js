@@ -1,4 +1,4 @@
-
+let weekOffset = 0;
 async function loadData() {
   try {
     const res = await fetch(
@@ -44,13 +44,9 @@ function renderCalendar() {
         <div class="shedule__calendar-day ${
           dayName === "Сб" || dayName === "Вс" ? "weekend" : ""
         }">
-        
           <div class="shedule__calendar-day-day">${dayName}</div>
           <small class="shedule__calendar-day-date">${num} ${month}</small>
         </div>
-
-        
-        
       `;
     }).join("")}
   `;

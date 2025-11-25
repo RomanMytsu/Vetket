@@ -1,2 +1,403 @@
 @use "../scss/utils/_variables.scss" as *;
 
+.one-specialist {
+  &__container {
+    padding: 0 15px;
+    @media (min-width: $bp-tablet) {
+      padding: 0 30px;
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 0 70px;
+    }
+    @media (min-width: $bp-desktop) {
+      padding: 0 254px;
+    }
+  }
+  &__top-content-wrapper {
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 37px 0 58px;
+    @media (min-width: $bp-laptop) {
+      padding: 57px 0 84px;
+    }
+  }
+
+  &__top-content {
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: $bp-laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-tablet) {
+      align-items: center;
+    }
+    @media (min-width: $bp-laptop) {
+      align-items: baseline;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    @media (min-width: $bp-laptop) {
+      font-size: 48px;
+    }
+  }
+
+  &__position {
+    font-size: 18px;
+    line-height: 1.38;
+    color: color(text2);
+    margin-bottom: 15px;
+    @media (min-width: $bp-laptop) {
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__specialization {
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      @media (min-width: $bp-laptop) {
+        font-size: 16px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 20px;
+      @media (min-width: $bp-laptop) {
+        gap: 8px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-item {
+      border-radius: 4px;
+      padding: 7px 10px 9px;
+      background: color(belyy);
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+      @media (min-width: $bp-laptop) {
+        font-size: 16px;
+        padding: 7px 14px 9px;
+      }
+    }
+  }
+
+  &__top-content-btn {
+    border-radius: 16px;
+    padding: 9px 16px;
+    background: color(osnovnoy);
+    border: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: color(belyy);
+    width: 100%;
+    max-width: 218px;
+    height: 48px;
+    @media (min-width: $bp-laptop) {
+      font-size: 16px;
+      padding: 11px 24px;
+      width: 218px;
+      height: 48px;
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    @media (min-width: $bp-laptop) {
+      margin-bottom: 0;
+      margin-top: 12px;
+    }
+  }
+
+  &__coment-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+      color: color(temnyy-osnovnoy);
+      @media (min-width: $bp-laptop) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__schedule {
+    padding: 45px 0 70px;
+    hr {
+      width: 100%;
+      height: 1px;
+      background: color(grani);
+      margin: 14px 0 18px;
+      @media (min-width: $bp-laptop) {
+        margin: 18px 0 22px;
+      }
+    }
+    @media (min-width: $bp-laptop) {
+      padding: 68px 0 106px;
+    }
+    &-wrapper {
+      @media (min-width: $bp-laptop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__schedule-city {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.17;
+    margin-bottom: 20px;
+
+    svg {
+      fill: color(ikonki-uslugi);
+    }
+    @media (min-width: $bp-laptop) {
+      font-size: 30px;
+      margin-bottom: 0;
+      align-items: baseline;
+    }
+  }
+
+  &__schedule-days-wrapper {
+    &-inner {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+    }
+    &-inner-day {
+      display: flex;
+      flex-direction: column;
+      width: 96px;
+    }
+
+    &-inner-day-name {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.18;
+      margin-bottom: 6px;
+      @media (min-width: $bp-laptop) {
+        font-size: 17px;
+      }
+    }
+
+    &-inner-day-date {
+      font-size: 10px;
+      line-height: 1.43;
+      color: color(text3);
+      @media (min-width: $bp-laptop) {
+        font-size: 14px;
+      }
+    }
+
+    &-inner-day-name--weekend {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.18;
+      color: color(osnovnoy-2);
+      margin-bottom: 6px;
+      @media (min-width: $bp-laptop) {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__schedule-time-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  &__schedule-time {
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    width: 96px;
+    @media (min-width: $bp-laptop) {
+      font-size: 16px;
+      width: 96px;
+    }
+  }
+
+  &__info-wrapper {
+    padding-bottom: 56px;
+    @media (min-width: $bp-laptop) {
+      padding-bottom: 96px;
+    }
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media (min-width: $bp-desktop) {
+      gap: 40px;
+      justify-content: start;
+    }
+  }
+
+  &__education {
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 0 rgba(49, 53, 54, 0.05);
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 25px 36px 35px;
+    @media (min-width: $bp-laptop) {
+      padding: 35px 56px 55px;
+      height: 624px;
+      width: 536px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.17;
+      margin-bottom: 23px;
+      @media (min-width: $bp-laptop) {
+        font-size: 30px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      @media (min-width: $bp-laptop) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-sub-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.18;
+      margin-bottom: 14px;
+      @media (min-width: $bp-laptop) {
+        font-size: 17px;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      p {
+        font-size: 14px;
+        line-height: 1.41;
+        margin-bottom: 12px;
+        @media (min-width: $bp-laptop) {
+          font-size: 17px;
+        }
+      }
+      @media (min-width: $bp-laptop) {
+        gap: 16px;
+        width: 395px;
+      }
+    }
+  }
+
+  &__skills {
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 0 rgba(49, 53, 54, 0.05);
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 25px 36px 35px;
+    @media (min-width: $bp-laptop) {
+      padding: 35px 56px 55px;
+      width: 536px;
+      height: 760px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &-item {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      line-height: 1.41;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 6px;
+        height: 6px;
+        background: color(osnovnoy);
+      }
+      @media (min-width: $bp-laptop) {
+        font-size: 17px;
+        width: 408px;
+      }
+    }
+  }
+
+  &__reviews-wrapper {
+    background: linear-gradient(90deg, #e8fafa 0%, #dcf2e8 100%);
+    padding: 34px 0 66px;
+    @media (min-width: $bp-laptop) {
+      padding: 64px 0;
+    }
+  }
+
+  &__reviews-title-wrapper {
+    @media (min-width: $bp-desktop) {
+      margin: 0;
+      align-items: baseline;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__reviews-title {
+    @media (min-width: $bp-desktop) {
+      font-size: 30px;
+    }
+  }
+}

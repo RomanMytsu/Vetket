@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20251124192016" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20251125173358" />
   <title>Страница Сотрудника</title>
 </head>
 
@@ -118,7 +118,9 @@
               >Истории пациентов</a
             >
           </li>
-          <li><a href="" class="side-bar__sub-menu-link">Статьи</a></li>
+          <li>
+            <a href="articles.html" class="side-bar__sub-menu-link">Статьи</a>
+          </li>
         </ul>
       </li>
       <li class="side-bar__menu-item">
@@ -137,8 +139,8 @@
 
       <main>
         <section class="one-specialist">
-  <div class="one-specialist__container container">
-    <div class="one-specialist__hero-wrapper">
+  <div class="one-specialist__top-content-wrapper">
+    <div class="one-specialist__container container">
       <div class="all-services__nav">
         <a href="index.html">Главная</a>
         <svg width="15" height="8">
@@ -150,9 +152,233 @@
         </svg>
         <p>Малицкая Валерия Викторовна</p>
       </div>
+      <div class="one-specialist__top-content">
+        <div class="one-specialist__text-wrapper">
+          <h2 class="one-specialist__title">
+            Малицкая <br />
+            Валерия Викторовна
+          </h2>
+          <p class="one-specialist__position">Главный ветеринарный врач</p>
+          <div class="one-specialist__specialization">
+            <p class="one-specialist__specialization-text">Специализации</p>
+            <ul class="one-specialist__specialization-list">
+              <li class="one-specialist__specialization-item">Дерматология</li>
+              <li class="one-specialist__specialization-item">Терапия</li>
+              <li class="one-specialist__specialization-item">УЗИ</li>
+              <li class="one-specialist__specialization-item">Хирургия</li>
+            </ul>
+          </div>
+          <button class="one-specialist__top-content-btn open-btn">
+            Записаться на прием
+          </button>
+        </div>
+
+        <div class="one-specialist__img-wrapper">
+          <img
+            src="img/our specialists/malitckay.webp"
+            alt="Image specialist"
+          />
+          <div class="one-specialist__coment-wrapper">
+            <img src="img/comment.svg" alt="Imgae comment" />
+            <p>2 отзыва</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+
+  <div class="one-specialist__schedule">
+    <div
+      class="one-specialist__container one-specialist__schedule-wrapper container"
+    >
+      <div class="one-specialist__schedule-city">
+        <svg width="28" height="28">
+          <use href="img/sprite.svg#met"></use>
+        </svg>
+        Строгино
+      </div>
+
+      <div>
+        <div class="one-specialist__schedule-days-wrapper">
+          <div class="one-specialist__schedule-days-wrapper-inner">
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div class="one-specialist__schedule-days-wrapper-inner-day-name">
+                Сегодня
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                25 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div class="one-specialist__schedule-days-wrapper-inner-day-name">
+                Завтра
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                26 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div class="one-specialist__schedule-days-wrapper-inner-day-name">
+                Ср
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                27 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div class="one-specialist__schedule-days-wrapper-inner-day-name">
+                Чт
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                28 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div class="one-specialist__schedule-days-wrapper-inner-day-name">
+                Пт
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                29 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div
+                class="one-specialist__schedule-days-wrapper-inner-day-name--weekend"
+              >
+                Сб
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                30 мая
+              </div>
+            </div>
+
+            <div class="one-specialist__schedule-days-wrapper-inner-day">
+              <div
+                class="one-specialist__schedule-days-wrapper-inner-day-name--weekend"
+              >
+                Вс
+              </div>
+              <div class="one-specialist__schedule-days-wrapper-inner-day-date">
+                31 мая
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="one-specialist__schedule-time-wrapper">
+          <div class="one-specialist__schedule-time">09:00–21:00</div>
+          <div class="one-specialist__schedule-time">-</div>
+          <div class="one-specialist__schedule-time">-</div>
+          <div class="one-specialist__schedule-time">10:00–...</div>
+          <div class="one-specialist__schedule-time">...10:00</div>
+          <div class="one-specialist__schedule-time">-</div>
+          <div class="one-specialist__schedule-time">-</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-specialist__info-wrapper">
+    <div class="one-specialist__container container">
+      <div class="one-specialist__info-container">
+        <div class="one-specialist__education">
+          <h2 class="one-specialist__education-title">Образование</h2>
+          <ul class="one-specialist__education-list">
+            <h4 class="one-specialist__education-sub-title">Дипломы</h4>
+            <li class="one-specialist__education-item">
+              <p>2008</p>
+              <p>
+                окончила РУДН (Российский Университет Дружбы Народов) по
+                специальности ветеринарный врач.
+              </p>
+            </li>
+          </ul>
+          <ul class="one-specialist__education-list">
+            <h4 class="one-specialist__education-sub-title">
+              Дополнительное обучение
+            </h4>
+            <li class="one-specialist__education-item">
+              <p>2016</p>
+              <p>
+                прошла курс повышения квалификации на базе Московской
+                Ветеринарной Академии
+              </p>
+            </li>
+            <li class="one-specialist__education-item">
+              <p>2017</p>
+              <p>
+                закончила школу ветеринарной дерматологии с основами
+                эндокринологии и онкоцитологии на базе школы постдипломного
+                образования доктора Сотникова
+              </p>
+            </li>
+            <li class="one-specialist__education-item">
+              <p>2020</p>
+              <p>
+                прошла первый модуль по подготовки ветеринарного онколога на
+                базе образовательного центра коллегии ветеринарных специалистов
+                EDUVET
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="one-specialist__skills">
+          <h2 class="one-specialist__education-title">
+            Профессиональные навыки
+          </h2>
+          <ul class="one-specialist__skills-list">
+            <li class="one-specialist__skills-item">
+              Терапия и общий прием мелких домашних животных
+            </li>
+            <li class="one-specialist__skills-item">
+              Лечение и профилактика дерматологических заболеваний мелких
+              домашних животных (незаразных, паразитарных, инфекционных,
+              аллергических, эндокринологических)
+            </li>
+            <li class="one-specialist__skills-item">
+              Диагностика дерматологических заболеваний мелких домашних животных
+              (проведение скотч-теста, микроскопия мазков и соскобов,
+              цитологические и гистологические исследования, взятие биопсии)
+            </li>
+            <li class="one-specialist__skills-item">
+              Хирургия общего профиля (стерилизация, кастрация, в том числе
+              крипторхов, уретростомия, паховые, пупочные грыжи, торакоцентез,
+              лапароцентез, энуклеация глазного яблока, ампутация рудиментарных
+              фаланг, хирургическое лечение ран)
+            </li>
+            <li class="one-specialist__skills-item">
+              Абдоминальная хирургия (овариогистэрэктомия, диагностическая
+              лапаротомия, операции на органах ЖКТ, мочевыделительной системы,
+              кесарево сечение и др.)
+            </li>
+            <li class="one-specialist__skills-item">
+              Рентгендиагностика (грудная клетка, брюшная полость, мягкие ткани,
+              скелет, органы ЖКТ)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-specialist__reviews-wrapper">
+    <div class="one-specialist__container container">
+      <div
+        class="reviews__sub-title-wrapper one-specialist__reviews-title-wrapper"
+      >
+        <h3 class="reviews__sub-title one-specialist__reviews-title">Отзывы</h3>
+        <button class="reviews__btn reviews-btn">Оставить отзыв</button>
+      </div>
+
+      <ul class="reviews__list"></ul>
+    </div>
+  </div>
 </section>
 
         <footer class="footer">
@@ -251,7 +477,11 @@
               >Истории пациентов</a
             >
           </li>
-          <li><a href="" class="burger-menu__sub-menu-link">Статьи</a></li>
+          <li>
+            <a href="articles.html" class="burger-menu__sub-menu-link"
+              >Статьи</a
+            >
+          </li>
         </ul>
       </li>
       <li class="burger-menu__menu-item">
@@ -349,6 +579,83 @@
   </div>
 </div>
 
-    <script src="js/main.min.js?_v=20251124192016"></script>
+    <div class="backdrop-reviews">
+  <div class="review-modal">
+    <div class="review-modal__container container">
+      <button class="review-modal__btn-close modal-btn-close-review">
+        <svg class="appointment-moda-icon-close" width="18" height="18">
+          <use href="img/sprite.svg#close-apo"></use>
+        </svg>
+      </button>
+      <h2 class="review-modal__title">Оставить отзыв</h2>
+      <form class="review-modal__form">
+        <div class="review-modal__group">
+          <label for="specialist" class="review-modal__label">Специалист</label>
+          <div class="custom-select" data-select>
+            <button
+              class="custom-select__trigger"
+              data-select-trigger
+              type="button"
+            >
+              <span class="custom-select__value"
+                >Малинина Валерия Викторовна</span
+              >
+            </button>
+
+            <ul class="custom-select__list" data-select-list>
+              <li class="custom-select__option" data-select-option>
+                Малинина Валерия Викторовна
+              </li>
+              <li class="custom-select__option" data-select-option>
+                Ярославская Екатерина Ивановна
+              </li>
+            </ul>
+
+            <input
+              type="hidden"
+              name="specialist_name"
+              value="Малинина Валерия Викторовна"
+              data-select-input
+            />
+          </div>
+        </div>
+        <div class="review-modal__group">
+          <textarea
+            class="review-modal__textarea"
+            name="review_text"
+          ></textarea>
+        </div>
+
+        <div class="review-modal__row">
+          <div class="review-modal__group review-modal__group-small">
+            <label class="review-modal__label">Ваше имя</label>
+            <input type="text" class="review-modal__input" name="user_name" />
+          </div>
+
+          <div class="review-modal__group review-modal__group-small">
+            <label class="review-modal__label">E-mail для ответа</label>
+            <input type="email" class="review-modal__input" name="user_email" />
+          </div>
+        </div>
+
+        <div class="review-modal__checkbox-wrapper">
+          <label class="review-modal__checkbox">
+            <input
+              type="checkbox"
+              class="review-modal__checkbox-input"
+              name="privacy_consent"
+            />
+            <p class="review-modal__checkbox-text">
+              <span>Я согласен</span> с условиями обработки персональных данных
+            </p>
+          </label>
+          <button class="review-modal__submit" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <script src="js/main.min.js?_v=20251125173358"></script>
   </body>
 </html>
